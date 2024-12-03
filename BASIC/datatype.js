@@ -16,6 +16,7 @@ let isLoggedIn = false
 //undefined
 //symbol => unique - use in react,figma tools
 //null => standalone value
+//NaN => not a number
 
 let st = null
 
