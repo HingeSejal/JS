@@ -19,6 +19,8 @@ let isLoggedIn = false
 //NaN => not a number
 
 let st = null
+const id = symbol('123')
+const bigNumber = 348888888823219837394n
 
 //object
 
