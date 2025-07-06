@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<style>
+    .red-color{
+        color: red;
+    }
+</style>
+<body>
+        <nav class="block">
+        <p class="paragraph">Welcome to the web</p>
+    </nav>
+    <div class="block">
+        <h4>My name is <span id="username">Sejal hinge</span></h4>
+        <p class="paragraph">Code for u</p>
+        <pre><code>console.log('hey there')</code></pre>
+    </div>
+    <div>
+        <div>
+            <h1>working div2</h1>
+        </div>
+    </div>
+</body>
+<script>
+    const el = document.getElementById("username");
+    el.innerText = "sejaaa" ;
+    el.classList.add("red-color", "one_more"); //adding class through js
+    el.style.textDecoration = "underline";
+    el.style.color = "tomato" ;
+    el.parentElement.style.background = "grey" ;
+    el.setAttribute("aria","123");
+    el.remove();
+</script>
+</html>
