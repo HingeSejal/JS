@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mycontainer"></div>
+    <button id="clickButton">Click Me</button>
+</body>
+<script>
+    const button = document.getElementById('clickButton');
+    const container = document.getElementById("my-container");
+    button.addEventListener("click",()=>{
+        const el=document.createElement("h1");
+        // container.innerHTML = "<h1>SEja</h1>"; //add once
+        container.appendChild("sejal"); // everytime btn clicked
+    });
+
+
+
+    let count=1;
+    button.addEventListener("click",()=>{
+        const el=document.createElement("li");
+        el.innerText = count; 
+        container.appendChild(el); // everytime btn clicked
+        count++ ;
+    });
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="block">
+        <p class="block remove">Hii</p>
+        <div class="work">
+            <p>happy day</p>
+        </div>
+    </div>
+    <button onclick="console.log('i m clicked')">Touch Me</button>
+    <button onclick="clickbt()">Handle</button>
+    <button id="clicker">Working / checkme</button>
+</body>
+<script>
+    //  function clickbt(){
+    //     alert("Hey im clicked");
+    //  }
+    
+    const el = document.getElementById("clicker");
+    el.onclick = function (){
+        console.log("hi");
+    };
+    el.addEventListener("click",()=>{
+        console.log("hey");
+    });  //avoids overwriting
+   
+
+    
+    
+    const nameBlock = document.getElementsByClassName("block");
+    el.addEventListener("click",() =>{
+      nameBlock.style.color ="red";
+    });
+
+    
+    
+    const allChildren = document.querySelector("body").children
+    for(let i=0;i<allChildren.length;i++){
+        allChildren.item(i).addEventListener('click',()=> {
+            allChildren.item(i).remove();
+        })
+    }
+</script>
+</html>
