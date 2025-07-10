@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local</title>
+</head>
+<body>
+    <input type="username" type="text" placeholder="Your Name">
+    <button id="clickbutton">Click</button>
+</body>
+<script>
+    const button=document.getElementById("clickButton");
+    const uname = document.getElementById('username');
+    
+
+    button.addEventListener("click",()=>{
+        const value = uname.value;
+        localStorage.setItem('name',value);
+
+    })
+</script>
+</html>
