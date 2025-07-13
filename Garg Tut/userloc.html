@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Location</title>
+</head>
+<body>
+    <h1>Getting User Location </h1>
+    <button id="getloc">Location</button>
+
+</body>
+<script>
+  const button = document.getElementById('getloc')
+  function gotlocation(position){
+    console.log(position);
+  }
+  function failedtoget(){
+    console.log('There was some issue');
+  }
+  button.addEventListener('click',async ()=>{
+    //promises required for async task as it doesn't get instantly
+      const result = navigator.geolocation.getCurrentPosition(gotlocation,failedtoget)  //success callback and error callback
+  })
+
+</script>
+</html>
