@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <div>
+        <h1 id='time'>time</h1>
+        <button id="stopbtn">stop</button>
+    </div>
+    <script>
+        const button = document.getElementById('stopbtn');
+        function showTime(){
+        const currentTime = new Date();
+        const time =`${currentTime.getHours()}:${currentTime.getMinutes()}:${currentTime.getSeconds()}`;
+        document.getElementById('time').innerText = time;
+        }
+
+        // setTimeout(() => {console.log('Hi'), 5000});
+        let interval = setInterval(showTime,1000); 
+        //1000 milisec
+        button.addEventListener('click',()=>{
+            clearInterval(interval);
+        })
+    </script>
+</body>
+</html>
